@@ -33,7 +33,7 @@
                     Web<span class="header-logo-substring">Studio</span>
                 </a>
 
-                <ul class="menu">
+                <ul class="menu-list">
 
                     <li>
                         <a class="menu-item active" href="/">Studio</a>
@@ -68,6 +68,14 @@
                     </li>
                 </ul>
             </address>
+
+            <button type="button" class="mobile-menu-button" onclick="openMobileMenu()">
+
+                <svg height="24" width="24">
+                    <use href="./images/icons.svg#menu"></use>
+                </svg>
+
+            </button>
         </div>
     </header>
 
@@ -81,7 +89,9 @@
                     Effective Solutions for Your Business
                 </h1>
 
-                <button class="order-btn button" type="button">Order Service</button>
+                <button class="order-btn button" type="button" onclick="openModal()">
+                    Order Service
+                </button>
 
             </div>
         </section>
@@ -183,7 +193,8 @@
 
                     <li class="team-item">
 
-                        <img src="./images/team/product_designer.jpg" alt="product designer" width="264">
+                        <img srcset="./images/team/product_designer.jpg    1x, ./images/team/product_designer@2x.jpg 2x"
+                            src="./images/team/product_designer.jpg" alt="product designer" width="264">
 
                         <div class="team-item-description">
 
@@ -245,7 +256,8 @@
 
                     <li class="team-item">
 
-                        <img src="./images/team/frontend_developer.jpg" alt="frontend developer" width="264">
+                        <img srcset="./images/team/frontend_developer.jpg    1x, ./images/team/frontend_developer@2x.jpg 2x"
+                            src="./images/team/frontend_developer.jpg" alt="frontend developer" width="264">
 
                         <div class="team-item-description">
 
@@ -308,7 +320,8 @@
 
                     <li class="team-item">
 
-                        <img src="./images/team/marketing.jpg" alt="marketing" width="264">
+                        <img srcset="./images/team/marketing.jpg    1x, ./images/team/marketing@2x.jpg 2x"
+                            src="./images/team/marketing.jpg" alt="marketing" width="264">
 
                         <div class="team-item-description">
 
@@ -370,7 +383,8 @@
 
                     <li class="team-item">
 
-                        <img src="./images/team/ui_designer.jpg" alt="ui designer" width="264">
+                        <img srcset="./images/team/ui_designer.jpg    1x, ./images/team/ui_designer@2x.jpg 2x"
+                            src="./images/team/ui_designer.jpg" alt="ui designer" width="264">
 
                         <div class="team-item-description">
 
@@ -445,7 +459,8 @@
 
                         <div class="portfolio-img">
 
-                            <img src="./images/portfolio/banking_app.jpg" alt="Banking App" width="360">
+                            <img srcset="./images/portfolio/banking_app.jpg    1x, ./images/portfolio/banking_app@2x.jpg 2x"
+                                src="./images/portfolio/banking_app.jpg" alt="Banking App" width="360">
 
                             <p class="portfolio-overlay">
                                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -469,7 +484,8 @@
 
                         <div class="portfolio-img">
 
-                            <img src="./images/portfolio/cashless_payment.jpg" alt="Cashless Payment" width="360">
+                            <img srcset="./images/portfolio/cashless_payment.jpg    1x, ./images/portfolio/cashless_payment@2x.jpg 2x"
+                                src="./images/portfolio/cashless_payment.jpg" alt="Cashless Payment" width="360">
 
                             <p class="portfolio-overlay">
                                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -493,7 +509,8 @@
 
                         <div class="portfolio-img">
 
-                            <img src="./images/portfolio/meditation_app.jpg" alt="Meditation App" width="360">
+                            <img srcset="./images/portfolio/meditation_app.jpg    1x,./images/portfolio/meditation_app@2x.jpg 2x"
+                                src="./images/portfolio/meditation_app.jpg" alt="Meditation App" width="360">
 
                             <p class="portfolio-overlay">
                                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -517,7 +534,8 @@
 
                         <div class="portfolio-img">
 
-                            <img src="./images/portfolio/taxi_service.jpg" alt="Taxi Service" width="360">
+                            <img srcset="./images/portfolio/taxi_service.jpg    1x,./images/portfolio/taxi_service@2x.jpg 2x"
+                                src="./images/portfolio/taxi_service.jpg" alt="Taxi Service" width="360">
 
                             <p class="portfolio-overlay">
                                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -541,7 +559,8 @@
 
                         <div class="portfolio-img">
 
-                            <img src="./images/portfolio/screen_illustrations.jpg" alt="Screen Illustrations"
+                            <img srcset="./images/portfolio/screen_illustrations.jpg    1x,./images/portfolio/screen_illustrations@2x.jpg 2x"
+                                src="./images/portfolio/screen_illustrations.jpg" alt="Screen Illustrations"
                                 width="360">
 
                             <p class="portfolio-overlay">
@@ -566,7 +585,8 @@
 
                         <div class="portfolio-img">
 
-                            <img src="./images/portfolio/online_courses.jpg" alt="Online Courses" width="360">
+                            <img srcset="./images/portfolio/online_courses.jpg    1x,./images/portfolio/online_courses@2x.jpg 2x"
+                                src="./images/portfolio/online_courses.jpg" alt="Online Courses" width="360">
 
                             <p class="portfolio-overlay">
                                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -690,7 +710,7 @@
 
         <div class="modal">
 
-            <button class="close-btn" type="button">
+            <button class="close-btn" type="button" onclick="closeModal()">
 
                 <svg height="8" width="8" class="close-icon">
                     <use href="./images/icons.svg#close"></use>
@@ -758,7 +778,8 @@
                     <label class="modal-label" for="user-comment">Comment</label>
 
                     <textarea class="modal-textarea modal-form-field" name="user-comment" id="user-comment"
-                        placeholder="Text input" rows="8"></textarea>
+                        placeholder="Text input" rows="8">
+                    </textarea>
 
                 </div>
 
@@ -790,6 +811,137 @@
             </form>
         </div>
     </div>
+
+
+    <div class="mobile-menu">
+
+        <button class="close-btn" type="button" onclick="closeMobileMenu()">
+
+            <svg height="8" width="8" class="close-icon">
+                <use href="./images/icons.svg#close"></use>
+            </svg>
+
+        </button>
+
+        <nav class="mobile-navigation">
+
+            <ul class="mobile-menu-list">
+
+                <li>
+
+                    <a class="menu-item active" href="./index.html">Studio</a>
+
+                </li>
+
+                <li>
+                    <a class="menu-item" href="">Portfolio</a>
+                </li>
+
+                <li>
+                    <a class="menu-item" href="">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+        <address class="mobile-contacts">
+
+            <ul class="contacts-list">
+
+                <li>
+                    <a class="contacts-item" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+
+                <li>
+                    <a class="mobile-contacts-item" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+
+            </ul>
+
+        </address>
+
+        <ul class="social-list">
+
+            <li class="social-item">
+
+                <a class="social-link" href="">
+
+                    <svg height="24" width="24" class="social-icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+
+                </a>
+
+            </li>
+
+            <li class="social-item">
+
+                <a class="social-link" href="">
+
+                    <svg height="24" width="24" class="social-icon">
+                        <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+
+                </a>
+
+            </li>
+
+            <li class="social-item">
+
+                <a class="social-link" href="">
+
+                    <svg height="24" width="24" class="social-icon">
+                        <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+
+                </a>
+
+            </li>
+
+            <li class="social-item">
+
+                <a class="social-link" href="">
+
+                    <svg height="24" width="24" class="social-icon">
+                        <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const modalOverlay = document.querySelector('.modal-overlay');
+        const openClass = 'is-open';
+
+        const openMobileMenu = () => {
+            modalOverlay.classList.remove(openClass);
+            mobileMenu.classList.add(openClass);
+        };
+
+        const closeMobileMenu = () => {
+            mobileMenu.classList.remove(openClass);
+        };
+
+        const openModal = () => {
+            mobileMenu.classList.remove(openClass);
+            modalOverlay.classList.add(openClass);
+        };
+
+        const closeModal = () => {
+            modalOverlay.classList.remove(openClass);
+        };
+
+        modalOverlay.addEventListener('click', event => {
+            if (event.target === modalOverlay) {
+                modalOverlay.classList.remove(openClass);
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>
